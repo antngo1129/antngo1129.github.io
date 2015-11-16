@@ -5,19 +5,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>new york, 2013</title>
         
-        <!-- Bootstrap -->
+        <!-- bootstrap core css-->
         <link href="bootstrap.css" rel="stylesheet">
+        
+        <!-- custom css-->
         <link href="main.css" rel="stylesheet">
         
-        <!-- adding google fonts -->
+        <!-- custom fonts -->
         <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
         
-        <!-- 1. Link to jQuery (1.8 or later), -->
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> <!-- 33 KB -->
-
-        <!-- fotorama.css & fotorama.js. -->
-        <link  href="fotorama.css" rel="stylesheet"> <!-- 3 KB -->
-        <script src="fotorama.js"></script> <!-- 16 KB -->
+        <!-- fotorama css -->
+        <link  href="fotorama.css" rel="stylesheet">
         
     </head>
     
@@ -146,4 +144,32 @@
                 <a href='https://farm1.staticflickr.com/668/22709419931_6b151f4dbe_h.jpg'><img src='https://farm1.staticflickr.com/668/22709419931_0322f00e1b_t.jpg' width='100' height='67'></a>
         </div>
     </body>
+    
+    <!-- link to jQuery (1.8 or later), -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> <!-- 33 KB -->
+    
+        <!-- bootstrap.js -->
+        <script type="text/javascript" src="bootstrap.js"></script>
+
+        <!-- fotorama.js. -->
+        <script src="fotorama.js"></script> <!-- 16 KB -->
+    
+        <script type="text/javascript" src="instafeed.js"></script>
+    
+        <!-- smooth scrolling -->
+        <script>
+        $(function() {
+            $('a[href*=#]:not([href=#])').click(function() {
+                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) { 
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                    if (target.length) {
+                        $('html,body').animate({
+                        scrollTop: target.offset().top
+                        }, 500);
+                    return false;
+                    }
+                }
+            });
+        });</script>
 </html>
